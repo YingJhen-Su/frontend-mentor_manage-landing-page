@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .btn-shadow {
+        @apply shadow-lg shadow-primary-light;
+    }
+
+    .error-input {
+        @apply border border-primary text-primary;
+    }
+
+    .body-img {
+        background-image: url("../images/bg-tablet-pattern.svg"),
+            url("../images/bg-tablet-pattern.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-size: 120%, 100%;
+        background-position:
+            top -15vh left 15vw,
+            top 72vh left 65vw;
+    }
+
+    .section-img {
+        background-image: url("../images/bg-simplify-section-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: top 10vw left 0;
+    }
+
+    /* .scroll-style::-webkit-scrollbar {
+        height: 6px;
+        background-color: transparent;
+    }
+
+    .scroll-style::-webkit-scrollbar-thumb {
+        background: theme("colors.word.light");
+    } */
+
+    @media screen(md) {
+        .body-img {
+            background-size: auto, 100%;
+            background-position:
+                top -25vh left 20vw,
+                top 75vh right 80vw;
+        }
+    }
+
+    @media screen(lg) {
+        .body-img {
+            background-size: auto, auto;
+            background-position:
+                top -15vh left 55vw,
+                top 90vh right 80vw;
+        }
+
+        .section-img {
+            background-image: url("../images/bg-simplify-section-desktop.svg");
+            background-size: auto;
+            background-position: top 100% left 15vw;
+        }
+    }
+}

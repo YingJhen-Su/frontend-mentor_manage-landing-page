@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <title>Manage landing page | Frontend Mentor</title>
+  <link rel="stylesheet" href="./output.css">
+  <script src="./main.js" defer></script>
+</head>
+
+<body class="w-full font-beVietnamPro text-sm lg:text-base font-normal text-word-light body-img">
+  <header class="w-[90%] max-w-6xl mx-auto pt-10 lg:pt-14 pb-12 lg:pb-28 flex justify-between items-center relative">
+    <h1>
+      <img src="../images/logo.svg" alt="logo">
+    </h1>
+    
+    <nav class="hidden lg:block text-lg font-medium text-word">
+      <ul class="flex gap-6">
+        <li><a class="hover:opacity-70 focus:opacity-70" href="#">Pricing</a></li>
+        <li><a class="hover:opacity-70 focus:opacity-70" href="#">Product</a></li>
+        <li><a class="hover:opacity-70 focus:opacity-70" href="#">About Us</a></li>
+        <li><a class="hover:opacity-70 focus:opacity-70" href="#">Careers</a></li>
+        <li><a class="hover:opacity-70 focus:opacity-70" href="#">Community</a></li>
+      </ul>
+    </nav>
+    
+    <button class="hidden lg:block text-white bg-primary py-4 px-8 rounded-full hover:opacity-70 focus:opacity-70 btn-shadow">Get Started</button>
+
+    <img id="menu_btn" class="lg:hidden z-30" src="../images/icon-hamburger.svg" alt="open icon">
+    <img id="close_btn" class="hidden z-30" src="../images/icon-close.svg" alt="close icon">
+    <nav id="menu" class="hidden text-base md:text-lg font-medium text-center text-word absolute w-full top-full py-10 bg-white z-30 rounded origin-top animate-open-menu">
+      <ul class="flex flex-col gap-6">
+        <li><a class="hover:opacity-70 focus:opacity-70" href="#">Pricing</a></li>
+        <li><a class="hover:opacity-70 focus:opacity-70" href="#">Product</a></li>
+        <li><a class="hover:opacity-70 focus:opacity-70" href="#">About Us</a></li>
+        <li><a class="hover:opacity-70 focus:opacity-70" href="#">Careers</a></li>
+        <li><a class="hover:opacity-70 focus:opacity-70" href="#">Community</a></li>
+      </ul>
+    </nav>
+    <div id="overlay" class="hidden w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.2)] to-[rgba(0,0,0,0.6)] z-20 fixed top-0 left-0"></div>
+  </header>
+  
+  <main>
+    <section class="w-[90%] max-w-6xl mx-auto text-center lg:text-start lg:flex lg:flex-row-reverse lg:items-center lg:justify-between lg:gap-8">
+      <img class="mx-auto lg:mx-0 lg:w-[47%]" src="../images/illustration-intro.svg" alt="banner image">
+  
+      <div class="mt-8 lg:mt-0 lg:w-[47%]">
+        <h2 class="text-4xl font-bold tracking-tight leading-tight lg:text-5xl text-word">Bring everyone together to build better products.</h2>
+        <p class="text-base mt-6 mb-8 lg:w-3/4 lg:text-lg lg:my-10 ">Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
+        <button class="block mx-auto lg:mx-0 text-white bg-primary py-4 px-8 rounded-full hover:opacity-70 focus:opacity-70 btn-shadow">Get Started</button>
+      </div>
+    </section>
+
+    <article class="w-full lg:w-[90%] lg:max-w-6xl mx-auto mt-24 lg:mt-32 mb-20 lg:mb-36 lg:flex lg:items-start lg:justify-between lg:gap-8">
+      <header class="w-[90%] lg:w-[47%] text-center lg:text-start mx-auto mb-14 lg:mx-0 lg:pt-2">
+        <h3 class="text-3xl lg:text-4xl font-bold tracking-tight text-word px-2 lg:px-0">What’s different about Manage?</h3>
+        <p class="mt-8 lg:mt-10 lg:w-3/4">Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.</p>
+      </header>
+      
+      <section class="lg:w-[47%]">
+        <div class="mb-12 lg:mb-10">
+          <h4 class="text-base lg:text-lg font-bold bg-secondary-pink lg:bg-inherit py-1.5 rounded-l-full ml-[5%] lg:ml-0">
+            <span class="text-white py-2 px-5 bg-primary rounded-full">01</span>
+            <span class="ml-2 tracking-tight text-word">Track company-wide progress</span>
+          </h4>
+          <p class="mx-[5%] lg:mx-0 lg:pl-[76px] mt-4">See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.</p>
+        </div>
+  
+        <div class="mb-12 lg:mb-10">
+          <h4 class="text-base lg:text-lg font-bold bg-secondary-pink lg:bg-inherit py-1.5 rounded-l-full ml-[5%] lg:ml-0">
+            <span class="text-white py-2 px-5 bg-primary rounded-full">02</span>
+            <span class="ml-2 tracking-tight text-word">Advanced built-in reports</span>
+          </h4>
+          <p class="mx-[5%] lg:mx-0 lg:pl-[76px] mt-4">Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.</p>
+        </div>
+  
+        <div>
+          <h4 class="text-base lg:text-lg font-bold bg-secondary-pink lg:bg-inherit py-1.5 rounded-l-full ml-[5%] lg:ml-0">
+            <span class="text-white py-2 px-5 bg-primary rounded-full">03</span>
+            <span class="ml-2 tracking-tight text-word">Everything you need in one place</span>
+          </h4>
+          <p class="mx-[5%] lg:mx-0 lg:pl-[76px] mt-4">Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.</p>
+        </div>
+      </section>
+    </article>
+
+    <section class="mb-10 lg:mb-44">
+      <h3 class="text-3xl lg:text-4xl font-bold text-center tracking-tight text-word mb-16 lg:mb-20">What they’ve said</h3>
+
+      <div id="slider" class="w-full overflow-hidden cursor-pointer scroll-smooth lg:scroll-auto snap-x snap-mandatory lg:snap-none text-center flex lg:px-4">
+        <div class="min-w-full px-[5%] lg:min-w-[40%] lg:px-4 flex flex-col items-center pointer-events-none snap-center snap-always">
+          <img class="w-20 translate-y-1/2 z-10" src="../images/avatar-anisha.png" alt="picture of Anisha">
+          <div class="min-h-60 bg-secondary-light pt-16 px-4 lg:px-10">
+            <h4 class="text-base lg:text-lg font-medium tracking-tight text-word mb-6">Anisha Li</h4>
+            <p>“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
+          </div>
+        </div>
+        
+        <div class="min-w-full px-[5%] lg:min-w-[40%] lg:px-4 flex flex-col items-center pointer-events-none snap-center snap-always">
+          <img class="w-20 translate-y-1/2 z-10" src="../images/avatar-ali.png" alt="picture of Ali">
+          <div class="min-h-60 bg-secondary-light pt-16 px-4 lg:px-10">
+            <h4 class="text-base lg:text-lg font-medium tracking-tight text-word mb-6">Ali Bravo</h4>
+            <p>“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
+          </div>
+        </div>
+        
+        <div class="min-w-full px-[5%] lg:min-w-[40%] lg:px-4 flex flex-col items-center pointer-events-none snap-center snap-always">
+          <img class="w-20 translate-y-1/2 z-10" src="../images/avatar-richard.png" alt="picture of Richard">
+          <div class="min-h-60 bg-secondary-light pt-16 px-4 lg:px-10">
+            <h4 class="text-base lg:text-lg font-medium tracking-tight text-word mb-6">Richard Watts</h4>
+            <p>“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”</p>
+          </div>
+        </div>
+        
+        <div class="min-w-full px-[5%] lg:min-w-[40%] lg:px-4 flex flex-col items-center pointer-events-none snap-center snap-always">
+          <img class="w-20 translate-y-1/2 z-10" src="../images/avatar-shanai.png" alt="picture of Shanai">
+          <div class="min-h-60 bg-secondary-light pt-16 px-4 lg:px-10">
+            <h4 class="text-base lg:text-lg font-medium tracking-tight text-word mb-6">Shanai Gough</h4>
+            <p>“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="button_group" class="mt-6 flex gap-2 justify-center lg:hidden">
+        <button class="w-2 h-2 border border-primary rounded-full bg-primary"></button>
+        <button class="w-2 h-2 border border-primary rounded-full"></button>
+        <button class="w-2 h-2 border border-primary rounded-full"></button>
+        <button class="w-2 h-2 border border-primary rounded-full"></button>
+      </div>
+
+      <button class="block mx-auto text-white bg-primary py-4 px-8 rounded-full mt-11 lg:mt-12 hover:opacity-70 focus:opacity-70 btn-shadow">Get Started</button>
+    </section>
+
+    <section class="w-full min-h-[400px] lg:min-h-56 bg-primary flex items-center section-img">
+      <div class="w-[90%] max-w-6xl mx-auto lg:flex lg:flex-row lg:justify-between lg:items-center">
+        <h2 class="text-white text-4xl font-bold text-center lg:text-start tracking-tight px-4 lg:px-0 lg:w-2/3 xl:w-2/5 mb-8 lg:mb-0">Simplify how your team works today.</h2>
+        <button class="block mx-auto lg:mx-0 lg:ml-auto text-primary bg-white font-bold py-4 px-8 rounded-full hover:opacity-80 focus:opacity-80 shadow">Get Started</button>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="w-full bg-secondary">
+    <div class="w-[90%] max-w-6xl mx-auto pt-8 lg:pt-14 pb-24 lg:pb-14 relative lg:flex lg:flex-row-reverse lg:items-stretch lg:justify-between">
+      <section class="flex flex-col justify-between">
+        <form id="form" class="flex items-start justify-center lg:justify-end gap-2" action="#">
+          <fieldset>
+            <input id="email_input" class="w-60 lg:w-52 text-sm py-4 px-6 lg:px-4 rounded-full outline-none" type="text" placeholder="Updates in your inbox…">
+            <p id="error_message" class="invisible text-sm mt-1 ml-6 lg:ml-4 text-primary">Please insert a valid email</p>
+          </fieldset>
+          <button class="py-4 px-8 lg:px-6 bg-primary text-white rounded-full hover:opacity-70 focus:opacity-70" type="submit">Go</button>
+        </form>
+        
+        <div class="w-full text-xs text-center lg:text-end absolute bottom-4 lg:static">
+          <p>Copyright 2020. All Rights Reserved</p>
+          Challenge by <a class="text-primary whitespace-nowrap" href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor</a>. 
+          Coded by <a class="text-primary whitespace-nowrap" href="https://www.frontendmentor.io/profile/YingJhen-Su" target="_blank">Vivian Su</a>.
+        </div>
+      </section>
+      
+      <nav class="flex items-start justify-around my-10 lg:my-0 lg:w-2/5 text-white">
+        <ul class="flex flex-col gap-4">
+          <li><a class="hover:text-primary focus:text-primary" href="#">Home</a></li>
+          <li><a class="hover:text-primary focus:text-primary" href="#">Pricing</a></li>
+          <li><a class="hover:text-primary focus:text-primary" href="#">Products</a></li>
+          <li><a class="hover:text-primary focus:text-primary" href="#">About Us</a></li>
+        </ul>
+        <ul class="flex flex-col gap-4">
+          <li><a class="hover:text-primary focus:text-primary" href="#">Careers</a></li>
+          <li><a class="hover:text-primary focus:text-primary" href="#">Community</a></li>
+          <li><a class="hover:text-primary focus:text-primary" href="#">Privacy Policy</a></li>
+        </ul>
+      </nav>
+  
+      <section class="flex flex-col gap-10 lg:flex-col-reverse lg:justify-between">
+        <div class="flex items-center justify-evenly lg:justify-between">
+          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-facebook.svg')] hover:bg-[url('../images/icon-facebook-or.svg')] focus:bg-[url('../images/icon-facebook-or.svg')]"></a>
+          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-youtube.svg')] hover:bg-[url('../images/icon-youtube-or.svg')] focus:bg-[url('../images/icon-youtube-or.svg')]"></a>
+          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-twitter.svg')] hover:bg-[url('../images/icon-twitter-or.svg')] focus:bg-[url('../images/icon-twitter-or.svg')]"></a>
+          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-pinterest.svg')] hover:bg-[url('../images/icon-pinterest-or.svg')] focus:bg-[url('../images/icon-pinterest-or.svg')]"></a>
+          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-instagram.svg')] hover:bg-[url('../images/icon-instagram-or.svg')] focus:bg-[url('../images/icon-instagram-or.svg')]"></a>
+        </div>
+        
+        <img class="w-1/2 lg:w-full mx-auto" src="../images/logo-white.svg" alt="logo">
+      </section>
+    </div>
+  </footer>
+</body>
+</html>
