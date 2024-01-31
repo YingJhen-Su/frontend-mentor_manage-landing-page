@@ -89,7 +89,7 @@ const initApp = () => {
 
     // scrollend event 確認是否改變圓點顯示
     const handleScroll = () => {
-        const currentIndex = Math.floor(slider.scrollLeft / sliderWidth);
+        const currentIndex = Math.floor(slider.scrollLeft / slider.clientWidth);
         if (currentIndex !== prevIndex) {
             changeButton(currentIndex);
         }
@@ -97,7 +97,6 @@ const initApp = () => {
 
     // 改變圓點顯示
     const changeButton = (index) => {
-        console.log(allButton);
         allButton.forEach((button) => {
             button.classList.remove("bg-primary");
         });
@@ -110,14 +109,13 @@ const initApp = () => {
     const handleClick = (index) => {
         if (index !== prevIndex) {
             changeButton(index);
-            slider.scrollLeft = sliderWidth * index;
+            slider.scrollLeft = slider.clientWidth * index;
         }
     };
 
     const slider = document.getElementById("slider");
     const buttonGroup = document.getElementById("button_group");
     const allButton = buttonGroup.querySelectorAll("button");
-    const sliderWidth = slider.clientWidth;
 
     let isDragging = false;
     let prevIndex = 0;
