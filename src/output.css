@@ -1098,6 +1098,10 @@ video {
   color: rgb(144 149 167 / var(--tw-text-opacity));
 }
 
+.underline{
+  text-decoration-line: underline;
+}
+
 .shadow{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -1199,10 +1203,6 @@ video {
   color: rgb(242 95 58 / var(--tw-text-opacity));
 }
 
-.hover\:underline:hover{
-  text-decoration-line: underline;
-}
-
 .hover\:opacity-70:hover{
   opacity: 0.7;
 }
@@ -1234,10 +1234,6 @@ video {
 .focus\:text-primary:focus{
   --tw-text-opacity: 1;
   color: rgb(242 95 58 / var(--tw-text-opacity));
-}
-
-.focus\:underline:focus{
-  text-decoration-line: underline;
 }
 
 .focus\:opacity-70:focus{
