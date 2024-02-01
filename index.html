@@ -15,7 +15,7 @@
       <img src="./images/logo.svg" alt="logo">
     </h1>
     
-    <nav class="hidden lg:block text-lg font-medium text-word">
+    <nav class="hidden lg:block text-lg font-medium text-word" aria-label="main">
       <ul class="flex gap-6">
         <li><a class="hover:opacity-70 focus:opacity-70" href="#">Pricing</a></li>
         <li><a class="hover:opacity-70 focus:opacity-70" href="#">Product</a></li>
@@ -29,7 +29,7 @@
 
     <img id="menu_btn" class="lg:hidden z-30" src="./images/icon-hamburger.svg" alt="open icon">
     <img id="close_btn" class="hidden z-30" src="./images/icon-close.svg" alt="close icon">
-    <nav id="menu" class="hidden text-base md:text-lg font-medium text-center text-word absolute w-full top-full py-10 bg-white z-30 rounded origin-top animate-open-menu">
+    <nav id="menu" class="hidden text-base md:text-lg font-medium text-center text-word absolute w-full top-full py-10 bg-white z-30 rounded origin-top animate-open-menu" aria-label="mobile">
       <ul class="flex flex-col gap-6">
         <li><a class="hover:opacity-70 focus:opacity-70" href="#">Pricing</a></li>
         <li><a class="hover:opacity-70 focus:opacity-70" href="#">Product</a></li>
@@ -153,12 +153,12 @@
         
         <div class="w-full text-xs text-center lg:text-end absolute bottom-4 lg:static">
           <p>Copyright 2020. All Rights Reserved</p>
-          Challenge by <a class="text-primary whitespace-nowrap" href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor</a>. 
-          Coded by <a class="text-primary whitespace-nowrap" href="https://www.frontendmentor.io/profile/YingJhen-Su" target="_blank">Vivian Su</a>.
+          Challenge by <a class="text-primary whitespace-nowrap hover:underline focus:underline" href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor</a>. 
+          Coded by <a class="text-primary whitespace-nowrap hover:underline focus:underline" href="https://www.frontendmentor.io/profile/YingJhen-Su" target="_blank">Vivian Su</a>.
         </div>
       </section>
       
-      <nav class="flex items-start justify-around my-10 lg:my-0 lg:w-2/5 text-white">
+      <nav class="flex items-start justify-around my-10 lg:my-0 lg:w-2/5 text-white" aria-label="footer">
         <ul class="flex flex-col gap-4">
           <li><a class="hover:text-primary focus:text-primary" href="#">Home</a></li>
           <li><a class="hover:text-primary focus:text-primary" href="#">Pricing</a></li>
@@ -174,11 +174,11 @@
 
       <section class="flex flex-col gap-10 lg:flex-col-reverse lg:justify-between">
         <div class="flex items-center justify-evenly lg:justify-between">
-          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-facebook.svg')] hover:bg-[url('../images/icon-facebook-or.svg')] focus:bg-[url('../images/icon-facebook-or.svg')]"></a>
-          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-youtube.svg')] hover:bg-[url('../images/icon-youtube-or.svg')] focus:bg-[url('../images/icon-youtube-or.svg')]"></a>
-          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-twitter.svg')] hover:bg-[url('../images/icon-twitter-or.svg')] focus:bg-[url('../images/icon-twitter-or.svg')]"></a>
-          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-pinterest.svg')] hover:bg-[url('../images/icon-pinterest-or.svg')] focus:bg-[url('../images/icon-pinterest-or.svg')]"></a>
-          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-instagram.svg')] hover:bg-[url('../images/icon-instagram-or.svg')] focus:bg-[url('../images/icon-instagram-or.svg')]"></a>
+          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-facebook.svg')] hover:bg-[url('../images/icon-facebook-or.svg')] focus:bg-[url('../images/icon-facebook-or.svg')]" aria-label="Facebook"></a>
+          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-youtube.svg')] hover:bg-[url('../images/icon-youtube-or.svg')] focus:bg-[url('../images/icon-youtube-or.svg')]" aria-label="Youtube"></a>
+          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-twitter.svg')] hover:bg-[url('../images/icon-twitter-or.svg')] focus:bg-[url('../images/icon-twitter-or.svg')]" aria-label="Twitter"></a>
+          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-pinterest.svg')] hover:bg-[url('../images/icon-pinterest-or.svg')] focus:bg-[url('../images/icon-pinterest-or.svg')]" aria-label="Pinterest"></a>
+          <a href="#" class="w-9 h-9 lg:w-6 lg:h-6 bg-cover bg-no-repeat bg-center bg-[url('../images/icon-instagram.svg')] hover:bg-[url('../images/icon-instagram-or.svg')] focus:bg-[url('../images/icon-instagram-or.svg')]" aria-label="Instagram"></a>
         </div>
         
         <img class="w-1/2 lg:w-full mx-auto" src="./images/logo-white.svg" alt="logo">

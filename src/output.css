@@ -1199,6 +1199,10 @@ video {
   color: rgb(242 95 58 / var(--tw-text-opacity));
 }
 
+.hover\:underline:hover{
+  text-decoration-line: underline;
+}
+
 .hover\:opacity-70:hover{
   opacity: 0.7;
 }
@@ -1230,6 +1234,10 @@ video {
 .focus\:text-primary:focus{
   --tw-text-opacity: 1;
   color: rgb(242 95 58 / var(--tw-text-opacity));
+}
+
+.focus\:underline:focus{
+  text-decoration-line: underline;
 }
 
 .focus\:opacity-70:focus{
