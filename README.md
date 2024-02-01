@@ -1,96 +1,176 @@
-# Frontend Mentor - Manage landing page
+# Frontend Mentor - Manage landing page solution
 
-![Design preview for the Manage landing page coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Manage landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+-   [Table of contents](#table-of-contents)
+-   [Overview](#overview)
+    -   [The challenge](#the-challenge)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
+    -   [Useful resources](#useful-resources)
+-   [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
+Users should be able to:
 
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
+-   View the optimal layout for the site depending on their device's screen size
+-   See hover states for all interactive elements on the page
+-   See all testimonials in a horizontal slider
+-   Receive an error message when the newsletter sign up `form` is submitted if:
+    -   The `input` field is empty
+    -   The email address is not formatted correctly
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+### Screenshot
 
-Your users should be able to:
+![screenshot](./images/screenshot.png)
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- See all testimonials in a horizontal slider
-- Receive an error message when the newsletter sign up `form` is submitted if:
-  - The `input` field is empty
-  - The email address is not formatted correctly
+### Links
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+-   Solution URL: [https://www.frontendmentor.io/solutions/manage-landing-page-using-tailwind-css-0d0Q3bsJDS](https://www.frontendmentor.io/solutions/manage-landing-page-using-tailwind-css-0d0Q3bsJDS)
+-   Live Site URL: [https://yingjhen-su.github.io/frontend-mentor_manage-landing-page/](https://yingjhen-su.github.io/frontend-mentor_manage-landing-page/)
 
-## Where to find everything
+## My process
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Built with
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+-   Semantic HTML5 markup
+-   [Tailwind CSS](https://tailwindcss.com/)
+-   Mobile-first workflow
+-   Javascript
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### What I learned
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+-   Use Tailwind CSS Utility class.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+```html
+<nav class="hidden lg:block text-lg font-medium text-word">
+    <ul class="flex gap-6">
+        <li>
+            <a class="hover:opacity-70 focus:opacity-70" href="#">Pricing</a>
+        </li>
+        <li>
+            <a class="hover:opacity-70 focus:opacity-70" href="#">Product</a>
+        </li>
+        <li>
+            <a class="hover:opacity-70 focus:opacity-70" href="#">About Us</a>
+        </li>
+        <li>
+            <a class="hover:opacity-70 focus:opacity-70" href="#">Careers</a>
+        </li>
+        <li>
+            <a class="hover:opacity-70 focus:opacity-70" href="#">Community</a>
+        </li>
+    </ul>
+</nav>
+```
 
-## Building your project
+-   Customize the theme of tailwind.config.js file.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+```javascript
+theme: {
+    extend: {
+        fontFamily: {
+            beVietnamPro: ["Be Vietnam Pro", "sans-serif"],
+        },
+        keyframes: {
+            "open-menu": {
+                "0%": { transform: "scaleY(0)" },
+                "80%": { transform: "scaleY(1.2)" },
+                "100%": { transform: "scaleY(1)" },
+            },
+        },
+        animation: {
+            "open-menu": "open-menu 0.3s ease-in-out",
+        },
+    },
+}
+```
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+-   Use CSS and @layer.
 
-## Deploying your project
+```css
+@layer utilities {
+    .btn-shadow {
+        @apply shadow-lg shadow-primary-light;
+    }
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+    .error-input {
+        @apply border border-primary text-primary;
+    }
+}
+```
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+-   Implement draggable slider.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+```javascript
+// 處理 mousedown & touchstart
+const dragStart = (e) => {
+    isDragging = true;
+    slider.classList.remove("cursor-pointer");
+    slider.classList.add("cursor-grabbing");
 
-## Create a custom `README.md`
+    prevX = e.pageX || e.touches[0].pageX;
+    scrollLeft = slider.scrollLeft;
+};
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+// 處理 mouseup & mouseleave & touchend
+const dragEnd = () => {
+    isDragging = false;
+    slider.classList.remove("cursor-grabbing");
+    slider.classList.add("cursor-pointer");
+};
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+// 處理 mousemove & touchmove
+const dragMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+    const currentX = e.pageX || e.touches[0].pageX;
+    const diff = currentX - prevX;
+    slider.scrollLeft = scrollLeft - diff;
+};
 
-## Submitting your solution
+// mouse event & touch event
+slider.addEventListener("mousedown", dragStart);
+slider.addEventListener("touchstart", dragStart);
+slider.addEventListener("mousemove", dragMove);
+slider.addEventListener("touchmove", dragMove);
+slider.addEventListener("mouseleave", dragEnd);
+slider.addEventListener("mouseup", dragEnd);
+slider.addEventListener("touchend", dragEnd);
+```
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+-   Handle scrollend event.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+```javascript
+// scrollend event 確認是否改變圓點顯示
+const handleScroll = () => {
+    const currentIndex = Math.floor(slider.scrollLeft / slider.clientWidth);
+    if (currentIndex !== prevIndex) {
+        changeButton(currentIndex);
+    }
+};
 
-## Sharing your solution
+// scrollend event
+slider.addEventListener("scrollend", handleScroll);
+```
 
-There are multiple places you can share your solution:
+### Useful resources
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+-   [[React]Tailwindcss 如何使用、安裝字型？](https://medium.com/@roan6903/react-tailwindcss-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-%E5%AE%89%E8%A3%9D%E5%AD%97%E5%9E%8B-3986bcb5f9f2)
+-   [Animations And Transitions With Tailwind CSS](https://blog.openreplay.com/animations-and-transitions-with-tailwind-css/)
+-   [[Javascript] Regular Expression – Email 表單驗證](https://ithelp.ithome.com.tw/articles/10094951)
+-   [正規表示式做欄位驗證+常用規則](https://hackmd.io/@eating-coding/SJf2U1wyY)
+-   [Create A Draggable Image Slider in HTML CSS & JavaScript | Mobile Friendly Slider in JavaScript](https://www.youtube.com/watch?v=7HPsdVQhpRw)
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+## Author
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+-   Frontend Mentor - [@YingJhen-Su](https://www.frontendmentor.io/profile/YingJhen-Su)
